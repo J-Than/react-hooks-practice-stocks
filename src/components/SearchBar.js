@@ -2,9 +2,6 @@ import React from "react";
 
 function SearchBar({ sort, filter, onSort, onFilter }) {
 
-  console.log(sort)
-  console.log(filter)
-
   function handleSort(e) {
     onSort(e.target.value)
   }
