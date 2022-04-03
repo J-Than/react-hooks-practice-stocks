@@ -13,19 +13,20 @@ function StockContainer({ stockList, onTradeStock, sort, filter }) {
     }
   }
 
-  // function sorter(a, b) {
-  //   if (sort!=="None") {
-  //     displayStocks = stockList.sort((a, b) => {
-  //       if (sort==="Alphabetically") {
-  //         a.ticker-b.ticker
-  //       } else {
-  //         a.price-b.price
-  //       }
-  //     })
-  //   }
-  // }
+  function sorter() {
+    if (sort!=="None") {
+      displayStocks = displayStocks.sort((a, b) => {
+        if (sort==="Alphabetically") {
+          return a.ticker < b.ticker ? -1 : 1;
+        } else {
+          return a.price-b.price
+        }
+      })
+    }
+  }
 
   filterer();
+  sorter();
 
   return (
     <div>
