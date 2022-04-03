@@ -19,9 +19,7 @@ function MainContainer() {
   function handleTradeStock(stock) {
     if (!portfolio.includes(stock)) {
       setPortfolio([...portfolio, stock]);
-      setStockList(stockList.filter(s => s.id !== stock.id))
     } else {
-      setStockList([...stockList, stock]);
       setPortfolio(portfolio.filter(s => s.id !== stock.id))
     }
   }
